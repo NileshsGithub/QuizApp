@@ -1,0 +1,450 @@
+<!--Todo: make responsive-->
+<!--Todo: make loader work-->
+<!--todo: order dashboard data according to time-->
+<!--todo: correct navbar check all bootstrp components-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./Icons/quiz.png" type="image/x-icon" />
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/d362cfdaed.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="homestyle.css">
+</head>
+
+<body class="active">
+  <!-- onload="loadfun()" -->
+
+  <!--  <div id="loader"></div> -->
+  <!-- Sidebar -->
+  <section id="sidebar" class="wrapper active">
+    <!--Top menu -->
+    <nav class="sidebar">
+      <div class="p-3 sidebar-heading">
+        <h5 class="d-flex fa-align-item-center">
+          <i class="fa-solid fa-compass mr-2"></i>
+          Menu
+        </h5>
+      </div>
+      <!--profile image & text-->
+      <div class="profile px-3 mt-2">
+        <h6 class="pt-1 mb-1">Account</h6>
+        <h7 id="user" class="w-100 text-truncate" style="display: inline-block;"></h7>
+      </div>
+      <!--menu item-->
+      <ul class="p-0">
+        <li>
+          <a href="#" class="active">
+            <span class="icon"><i class="fa-solid fa-house"></i></span>
+            <span class="item" id="home_btn">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fas fa-desktop"></i></span>
+            <span class="item" id="dash_btn">My Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- Homepage w/o Sidebar -->
+  <section class="home active">
+
+    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button type="button" id="menu1" class="btn btn-primary mr-2">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <a class="navbar-brand fs-4 ms-2 " href="#">Quiz me up</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex gap-3 me-2" role="search">
+            <a id="userlink" class="nav-link" href="#">UserName</a>
+            <a id="logoutlink" class="nav-link" href="#">Log Out</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Homepage w/o Dashboard -->
+    <section id="onlyhome">
+
+
+      <!-- Navbar Homepage -->
+      <section class="spacer layer1 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-pop-up-top ">SawaalJawaab.com</h1>
+        <p class="fs-5 mt-4">Best quiz platform available!</p>
+      </section>
+
+
+      <section class="spacer d-flex py-4">
+        <div class="w-50">
+          <img class="h-100" src="./Icons/AI.jpg" alt="AI">
+        </div>
+        <div class="w-50 px-5 py-5 d-flex flex-column justify-content-center">
+          <h2 class=" mb-5">Generate quiz on your topic!</h2>
+          <div class="input-group input-group-lg mb-5 w-75">
+            <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter topic"
+              aria-describedby="inputGroup-sizing-lg">
+          </div>
+          <button type="button" class="btn btn-primary w-25">Generate</button>
+        </div>
+      </section>
+
+
+      <section class="spacer layer2 py-4" id="category">
+        <h4 class="text-center fs-2 mt-4 mb-4">Categories</h4>
+
+        <div class="p-4 d-flex justify-content-evenly flex-wrap gap-4 fs-6">
+          <div class="card shadow" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title p-2">Aptitude</h5>
+              <ul>
+                <li> <a class="icon-link icon-link-hover" href="#">
+                    Icon link
+                    <svg class="bi" aria-hidden="true">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg>
+                  </a></li>
+                <li> <a class="icon-link icon-link-hover" href="#">
+                    Icon link
+                    <svg class="bi" aria-hidden="true">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card shadow" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title">Letter and number series</h5>
+              <a href="start2.html" class="card-link">Select</a>
+              <a href="start2.html" class="card-link">Select</a>
+            </div>
+          </div>
+          <div class="card shadow" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title">Verbal Analogy</h5>
+              <a href="start3.html" class="card-link">Select</a>
+              <a href="start3.html" class="card-link">Select</a>
+            </div>
+          </div>
+          <div class="card shadow" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title">Programing</h5>
+              <a href="start4.html" class="card-link">Select</a>
+              <a href="start4.html" class="card-link">Select</a>
+            </div>
+          </div>
+          <div class="card shadow" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title">Letter and number series</h5>
+              <a href="start2.html" class="card-link">Select</a>
+              <a href="start2.html" class="card-link">Select</a>
+            </div>
+          </div>
+          <div class="card shadow" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title">Letter and number series</h5>
+              <a href="start2.html" class="card-link">Select</a>
+              <a href="start2.html" class="card-link">Select</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="about" class="spacer d-flex py-5 justify-content-center">
+        <div class="w-50 px-5 py-5">
+          <h1 class="fs-1 mb-5 mt-5 ps-3">About us</h1>
+          <p class="mx-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cumque impedit,
+            aut ipsa
+            deleniti, nulla
+            ipsam, non unde rerum facere dolor molestiae labore repudiandae numquam aliquam ab illum iusto. Placeat!</p>
+          <button type="button" class="btn btn-primary ms-3">Read More</button>
+        </div>
+        <div class="w-50">
+          <img class="w-100" src="./Icons/about.jpg" alt="about us image">
+        </div>
+      </section>
+
+
+      <section id="contact" class="layer3 pt-4 d-flex flex-wrap flex-column align-content-center">
+        <h3 class="mb-5 mt-4 text-center">Contact Us</h3>
+        <div class="input-group w-25 mb-4">
+          <span class="input-group-text">Enter <br> message</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <button class="btn btn-secondary" type="button" id="button-addon2">Submit</button>
+        </div>
+        <div class="socials gap-4 mb-4 mt-4 d-flex justify-content-center">
+          <a href="" class="text-dark"><i class="fa-brands fa-github fa-2xl"></i></a>
+          <a href="" class="text-dark"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+          <a href="" class="text-dark"><i class="fa-brands fa-dev fa-2xl"></i></a>
+          <a href="" class="text-dark"><i class="fa-brands fa-square-behance fa-2xl"></i></a>
+        </div>
+      </section>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+      <!-- <div hidden id="spinner"></div> -->
+      <div class="px-5 pt-4 ">
+        <div class="mb-4 ml-3">
+          <h5 class="font-weight-bolder mb-1">Dashboard</h5>
+          <h7 id="user1" class="message"></h7>
+        </div>
+        <table class="table">
+          <thead class="bg-primary table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Quiz</th>
+              <th scope="col">Score(/10)</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody id="tbody1"></tbody>
+        </table>
+      </div>
+    </section>
+
+
+  </section>
+
+
+  <!--------------------------------script------------------------------------------------------------------------------------------------>
+
+
+  <script type="module">
+
+    // -------------------------------Firebase configuration----------------------------------//
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+
+    import {
+      getAuth,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+
+    import { getDatabase, ref, get, child, onValue, orderByChild, query } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+    // Web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBODwSzpJvyU6DJSkgMqimtGrjd3rtc4HE",
+      authDomain: "quizdb-639e8.firebaseapp.com",
+      databaseURL: "https://quizdb-639e8-default-rtdb.firebaseio.com",
+      projectId: "quizdb-639e8",
+      storageBucket: "quizdb-639e8.appspot.com",
+      messagingSenderId: "363980400085",
+      appId: "1:363980400085:web:72bf87fbccaa543b45495c",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    // Initialize variables
+    const auth = getAuth()
+    const db = getDatabase();
+
+    //------------------------------References-------------------------------------------------//
+
+    const logout_btn = document.getElementById("out_btn")
+    const menu = document.querySelector("#menu1");
+    const home_page = document.querySelector("#onlyhome");
+    const dash = document.querySelector(".dashboard");
+    const dashmenu = document.querySelector("#men2");
+    const closemenu = document.querySelector("#menu3");
+    const dash_btn = document.querySelector("#dash_btn");
+    const home_btn = document.querySelector("#home_btn");
+    const spinner = document.getElementById("spinner");
+    var userId = null
+
+
+    //------------------------assign events----------------------------------------//
+
+    //-----------------------Checked if loged in (compulsary)-----------------------------------//
+
+    onAuthStateChanged(auth, (user) => {
+      document.getElementById("user").innerHTML = user.email
+      document.getElementById("user1").innerHTML = user.email
+      document.querySelector("#userlink").innerHTML = user.email                  //user email display
+    });
+
+    //------------------------------on login----------------------------------------------//
+
+    let userlink = document.querySelector("#userlink")
+    let logoutlink = document.querySelector("#logoutlink")
+    var currentUser = null;
+
+    function getUsername() {
+      let keepLoggedIn = localStorage.getItem("keepLoggedIn")
+
+      if (keepLoggedIn == "yes") {
+        currentUser = (localStorage.getItem('user'))
+        userId = localStorage.getItem("userId");
+      }
+      else {
+        currentUser = (sessionStorage.getItem('user'))
+        userId = sessionStorage.getItem("userId");
+      }
+    }
+
+    window.onload = function () {
+      console.log(currentUser)
+      getUsername();
+      if (currentUser == null) {
+        userlink.innerHTML = "Create New Account"
+        userlink.classList.replace("nav-link", "btn")
+        userlink.classList.add("btn-primary")
+        userlink.href = "register.html"
+
+        logoutlink.innerHTML = "Log In"
+        logoutlink.classList.replace("nav-link", "btn")
+        logoutlink.classList.add("btn-primary")
+        logoutlink.href = "login.html"
+        document.getElementById("menu1").style.display = "none";
+      }
+      else {
+        userlink.classList.replace("btn", "nav-link")
+        userlink.classList.remove("btn-primary")
+        userlink.href = "#"
+
+        logoutlink.innerHTML = "Log Out"
+        logoutlink.classList.replace("btn", "nav-link")
+        logoutlink.classList.remove("btn-primary")
+        logoutlink.addEventListener('click', logout);
+        document.getElementById("menu1").style.display = "block";
+
+      }
+    }
+
+    //---------------------------------logout script-------------------------------------------//
+
+    function logout() {
+
+      signOut(auth).then(() => {
+        alert("signout sucessful")
+        sessionStorage.removeItem('user')
+        sessionStorage.removeItem('userId')
+        localStorage.removeItem('user')
+        localStorage.removeItem('keepLoggedIn')
+        localStorage.removeItem('userId')
+        document.getElementById("user").innerHTML = ""
+        document.getElementById("user1").innerHTML = ""
+        window.location = "index.html"
+      }).catch((error) => {
+        alert("error" + error)
+      });
+
+    }
+
+    //---------------------------------homepage script-------------------------------------------//
+
+    menu.addEventListener("click", sidebr)
+    /* dashmenu.addEventListener("click", sidebr)
+    closemenu.addEventListener("click", sidebr) */
+
+    function sidebr() {
+      document.querySelector("body").classList.toggle("active");
+    }
+
+    dash.style.display = 'none'
+
+    dash_btn.onclick = () => {
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          alert("Log in first");
+        }
+        else {
+          home_page.style.display = 'none'
+          dash.style.display = 'block'
+          document.querySelector(".nav-pills").style.display = 'none'
+          getDataFromDb();
+        }
+      })
+    };
+
+    home_btn.onclick = () => {
+      location.replace("index.html")
+    };
+
+    //---------------------------------Dashboard script-------------------------------------------//
+
+    var serial = 0
+    var tbody = document.querySelector("#tbody1")
+
+    function AddToTable(quizn, score, time) {
+      let trow = document.createElement("tr")
+      let td1 = document.createElement('td')
+      let td2 = document.createElement('td')
+      let td3 = document.createElement('td')
+      let td4 = document.createElement('td')
+
+      td1.innerHTML = ++serial;
+      td2.innerHTML = quizn;
+      td3.innerHTML = score;
+      td4.innerHTML = time;
+
+      trow.appendChild(td1)
+      trow.appendChild(td2)
+      trow.appendChild(td3)
+      trow.appendChild(td4)
+
+      tbody.appendChild(trow)
+      spinner.setAttribute('hidden', '');
+    }
+
+    function AddAllToTable(TheScore) {
+      serial = 0;
+      tbody.innerHTML = "";
+      TheScore.forEach(element => {
+        AddToTable(element.quiz_name, element.final_score, element.time);
+      });
+    }
+
+    function getDataFromDb() {
+
+      spinner.removeAttribute('hidden');
+
+      const q = query(ref(db, "/Users/" + userId + "/Score"), orderByChild('final_score', 'desc'));
+
+      onValue(q, (snapshot) => {
+        var scores = [];
+        snapshot.forEach(childSnapshot => {
+          scores.push(childSnapshot.val());
+        });
+        AddAllToTable(scores)
+      })
+    }
+
+  </script>
+
+</body>
+
+</html>

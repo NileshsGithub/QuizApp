@@ -1,0 +1,221 @@
+/* todo: Add diff Fonts to diff elements*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar .navbar-brand {
+  font-size: 1.3rem;
+}
+
+.wrapper .sidebar {
+  background-color: #f8f9fa;
+  /* background-image: linear-gradient(to bottom right, #4dc9e6, #210cae); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100%;
+  border-right: 3px solid gray;
+  transition: all 0.3s ease;
+}
+
+.home {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebar-heading {
+  height: 57px;
+  background-color: #0066ff;
+  color: #f8f9fa;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.sidebar .profile {
+  color: #0066ff;
+  margin: 10px 0 5px;
+  cursor: default;
+}
+
+body.active .wrapper .sidebar {
+  left: -225px;
+}
+
+body.active .home {
+  margin-left: 0;
+  width: 100%;
+}
+
+.wrapper #out_btn {
+  position: absolute;
+  top: 93%;
+  left: 60%;
+}
+
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid gray;
+  color: #0066ff;
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper .sidebar ul li a .icon {
+  color: #0066ff;
+  width: 30px;
+  display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+  color: #0066ff;
+
+  background: white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon {
+  color: #0066ff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+  display: block;
+}
+
+/* homepage */
+
+#main_img,
+#AI_img {
+  position: relative;
+}
+
+#img_btn {
+  position: absolute;
+  top: 80%;
+  left: 45%;
+}
+
+#img_inp {
+  position: absolute;
+  top: 67%;
+  left: 55%;
+  width: 20%;
+}
+
+#AI_btn {
+  position: absolute;
+  top: 67%;
+  left: 78%;
+}
+
+section {
+  display: block;
+}
+
+/* Landing SVGs */
+
+.spacer {
+  position: relative;
+  aspect-ratio: 960/400;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1,
+.layer2,
+.layer3 {
+  background-color: gainsboro;
+  background-image: url("");
+}
+
+.layer2 {
+  background-image: url("");
+}
+
+.text-pop-up-top {
+  color: #023047;
+  font-size: 5rem;
+  font-weight: 700;
+  animation: text-pop-up-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.dashboard {
+  background-color: #f8f9fa;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff url("Icons/__Iphone-spinner-1.gif") no-repeat center;
+  z-index: 99999;
+}
+
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 48px;
+  height: 48px;
+  border: 5px solid #0066ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  will-change: transform;
+  animation: spin 1s infinite linear;
+}
+
+/* tranformations------------------------------------ */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text-pop-up-top {
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-50px);
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
